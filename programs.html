@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Φροντιστήρια Μπακούλα</title>
+    <link rel="icon" type="image/x-icon" href="icons/icon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+
+
+<body class="bg-[#B2C4DD] min-h-screen text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- ================= TOP UTILITY BAR ================= -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-slate-400">
+                <span class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-location-dot text-sky-400"></i> Αγ. Ιωάννου 7, Αγ. Παρασκευή
+                </span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="tel:2106011814" class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-phone text-sky-400"></i> 2106011814
+                </a>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="mailto:frontistiria.bakoula@gmail.com"
+                    class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-envelope text-sky-400"></i> frontistiria.bakoula@gmail.com
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-slate-500 text-[11px] hidden lg:inline">© 2026 Φροντιστήρια Μπακούλα.</span>
+                <div class="flex items-center gap-3 text-slate-400">
+                    <a href="https://www.facebook.com/profile.php?id=100057698460329" target="_blank"
+                        class="hover:text-sky-400 transition" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffrontistiria.bakoula%2F&is_from_rle"
+                        target="_blank" class="hover:text-sky-400 transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/nikos97bakoulas" target="_blank" class="hover:text-sky-400 transition"
+                        aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://gr.linkedin.com/company/%CF%86%CF%81%CE%BF%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%B1-%CE%BC%CF%80%CE%B1%CE%BA%CE%BF%CF%8D%CE%BB%CE%B1" target="_blank" class="hover:text-sky-400 transition"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= STICKY MAIN HEADER ================= -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl text-slate-900 flex items-center justify-center shadow-lg">
+                    <img src="icons/icon.png">
+                </div>
+                <div>
+                    <span
+                        class="block text-lg font-black tracking-tight text-slate-900 group-hover:text-indigo-900 transition leading-none">
+                        Φροντιστήρια
+                    </span>
+                    <span class="block text-lg font-black tracking-tight text-indigo-600 leading-none mt-0.5">
+                        Μπακούλα
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-1.5 xl:gap-3">
+                <a href="programs.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+                    <span>Προγράμματα</span>
+                </a>
+
+                <a href="useful-links.html"
+                    class="px-2.5 py-1.5 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 leading-tight shrink-0">
+                    <i class="fa-solid fa-book text-indigo-600"></i>
+                    <span class="text-left">Υλικό &<br class="hidden lg:block xl:hidden"> Πανελλήνιες</span>
+                </a>
+
+                <a href="gallery.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-images text-indigo-600"></i>
+                    <span>Φωτογραφίες</span>
+                </a>
+
+                <a href="https://bakoula.blogspot.com/" target="_blank"
+                    class="px-2.5 py-1.5 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 leading-tight shrink-0">
+                    <i class="fa-solid fa-newspaper text-indigo-600" aria-hidden="true"></i>
+                    <span class="text-left">Ηλεκτρονική<br class="hidden lg:block xl:hidden"> Εφημερίδα</span>
+                </a>
+
+                <a href="sports.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-trophy text-indigo-600"></i>
+                    <span>Αθλητισμός</span>
+                </a>
+
+                <a href="contact.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-envelope text-indigo-600"></i>
+                    <span>Επικοινωνία</span>
+                </a>
+            </nav>
+
+            <!-- Header CTA & Mobile Button -->
+            <div class="flex items-center gap-3">
+                <button id="menu-btn"
+                    class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center text-xl focus:outline-none transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-2 shadow-2xl transition-all">
+            <a href="programs.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-graduation-cap w-6 text-indigo-600"></i> Προγράμματα
+            </a>
+            <a href="useful-links.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-link w-6 text-indigo-600"></i> Χρήσιμοι Σύνδεσμοι
+            </a>
+            <a href="gallery.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-images w-6 text-indigo-600"></i> Φωτογραφίες
+            </a>
+            <a href="https://bakoula.blogspot.com/" target="_blank"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-bullhorn w-6 text-indigo-600"></i> Ηλεκτρονική Εφημερίδα
+            </a>
+            <a href="sports.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-trophy w-6 text-indigo-600"></i> Αθλητισμός
+            </a>
+            <a href="contact.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-envelope w-6 text-indigo-600"></i> Επικοινωνία
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow py-10 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+            <!-- ================= PAGE HEADER ================= -->
+            <section
+                class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+                <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="space-y-2">
+                        <span
+                            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-graduation-cap"></i> Εκπαιδευτικα Προγραμματα
+                        </span>
+                        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+                            Προγράμματα Σπουδών
+                        </h1>
+                        <p class="text-slate-300 text-base md:text-lg">
+                            Ανακαλύψτε τα ολοκληρωμένα προγράμματα προετοιμασίας για όλες τις τάξεις και τις
+                            Πανελλαδικές.
+                        </p>
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-indigo-500 text-slate-950 flex items-center justify-center text-3xl font-bold shadow-lg shrink-0">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="max-w-7xl mx-auto px-6">
+
+                    <!-- Main tabs -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-10">
+
+                        <button
+                            class="program-tab active px-6 py-3 rounded-xl bg-indigo-950 shadow text-white font-medium transition"
+                            data-target="gymnasium">
+                            Γυμνάσιο
+                        </button>
+
+                        <button class="program-tab px-6 py-3 rounded-xl bg-white shadow font-medium transition"
+                            data-target="lyceum">
+                            Λύκειο
+                        </button>
+
+                        <button class="program-tab px-6 py-3 rounded-xl bg-white shadow font-medium transition"
+                            data-target="summer">
+                            Θερινά
+                        </button>
+                    </div>
+
+                    <!-- Gymnasium tabs -->
+                    <div id="gymnasium-tabs" class="flex flex-wrap justify-center gap-3 mb-10">
+                        <button
+                            class="sub-tab active px-5 py-2 rounded-full bg-indigo-500 shadow text-white font-medium transition"
+                            data-target="gym-a">
+                            Α' Γυμνασίου
+                        </button>
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="gym-b">
+                            Β' Γυμνασίου
+                        </button>
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="gym-c">
+                            Γ' Γυμνασίου
+                        </button>
+                    </div>
+
+                    <!-- Lyceum tabs -->
+                    <div id="lyceum-tabs" class="hidden flex flex-wrap justify-center gap-3 mb-10">
+                        <button
+                            class="sub-tab active px-5 py-2 rounded-full bg-indigo-500 shadow text-white font-medium transition"
+                            data-target="lyceum-a">
+                            Α' Λυκείου
+                        </button>
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="lyceum-b">
+                            Β' Λυκείου
+                        </button>
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="lyceum-c">
+                            Γ' Λυκείου
+                        </button>
+                    </div>
+
+                    <!-- Summer tabs -->
+                    <div id="summer-tabs" class="hidden flex flex-wrap justify-center gap-3 mb-10">
+                        <button
+                            class="sub-tab active px-5 py-2 rounded-full bg-indigo-500 shadow text-white font-medium transition"
+                            data-target="summer-gym-a">
+                            Α' Γυμνασίου
+                        </button>
+
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="summer-gym-b">
+                            Β' Γυμνασίου
+                        </button>
+
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="summer-gym-c">
+                            Γ' Γυμνασίου
+                        </button>
+
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="summer-lyceum-a">
+                            Α' Λυκείου
+                        </button>
+
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="summer-lyceum-b">
+                            Β' Λυκείου
+                        </button>
+
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="summer-lyceum-c">
+                            Γ' Λυκείου
+                        </button>
+
+                        <button class="sub-tab px-5 py-2 rounded-full bg-white shadow font-medium transition"
+                            data-target="summer-epal">
+                            Γ' ΕΠΑΛ
+                        </button>
+                    </div>
+
+                    <!-- ================= Α' Γυμνασίου ================= -->
+                    <div id="gym-a" class="program-content">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Α' Γυμνασίου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        6 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            3
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Β' Γυμνασίου ================= -->
+                    <div id="gym-b" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Β' Γυμνασίου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        7 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            3
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Χημεία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Γ' Γυμνασίου ================= -->
+                    <div id="gym-c" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Γ' Γυμνασίου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        8 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            4
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Χημεία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Α' Λυκείου ================= -->
+                    <div id="lyceum-a" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Α' Λυκείου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        16 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200">
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Έκθεση & Λογοτεχνία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1.5
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            4.5
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Χημεία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Β' Λυκείου ================= -->
+                    <div id="lyceum-b" class="program-content hidden">
+
+                        <!-- ================= B' LYKEIOU DIRECTIONS ================= -->
+                        <div class="grid md:grid-cols-2 gap-8">
+
+                            <!-- 1ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                1ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Ανθρωπιστικές, Νομικές & Κοινωνικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                11 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Αρχαία Ελληνικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Ιστορία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Λατινικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <!-- 2ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                2ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Θετικές & Τεχνολογικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                14 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                6
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Βιολογία*
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 3ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                3ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Επιστήμες Υγείας & Ζωής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                11 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Βιολογία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά*
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 4ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                4ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Σπουδές Οικονομίας & Πληροφορικής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                13 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                6
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΕΠΠ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΟΘ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική*
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mt-10 max-w-5xl mx-auto">
+                            <div class="bg-slate-100 rounded-xl px-6 py-4 flex items-start gap-3">
+                                <div class="text-blue-900 text-xl">
+                                    ℹ️
+                                </div>
+                                <p class="text-slate-600">
+                                    Τα μαθήματα με <strong>*</strong> είναι προαιρετικά για τους μαθητές
+                                    που θα επιλέξουν την αντίστοιχη ομάδα προσανατολισμού.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Γ' Λυκείου ================= -->
+                    <div id="lyceum-c" class="program-content hidden">
+
+                        <!-- ================= Γ' LYKEIOU DIRECTIONS ================= -->
+                        <div class="grid md:grid-cols-2 gap-8">
+
+                            <!-- 1ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                1ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Ανθρωπιστικές, Νομικές & Κοινωνικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                14 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Αρχαία Ελληνικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Ιστορία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Λατινικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <!-- 2ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                2ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Θετικές & Τεχνολογικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                16 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 3ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                3ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Επιστήμες Υγείας & Ζωής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                15 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Βιολογία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 4ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                4ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Σπουδές Οικονομίας & Πληροφορικής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                14 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΕΠΠ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΟΘ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= Θερινά Α' Γυμνασίου ================= -->
+                    <div id="summer-gym-a" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Θερινό Πρόγραμμα Α' Γυμνασίου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        4 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Θερινά B' Γυμνασίου ================= -->
+                    <div id="summer-gym-b" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Θερινό Πρόγραμμα B' Γυμνασίου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        7 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            3
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Χημεία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Θερινά Γ' Γυμνασίου ================= -->
+                    <div id="summer-gym-c" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Θερινό Πρόγραμμα Γ' Γυμνασίου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        8 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            3
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Χημεία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Θερινά Α' Λυκείου ================= -->
+                    <div id="summer-lyceum-a" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Θερινό Πρόγραμμα Α' Λυκείου
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        11 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1.5
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Άλγεβρα
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            3.5
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Γεωμετρία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Φυσική
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Χημεία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            1
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Αρχαία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Θερινά Β' Λυκείου ================= -->
+                    <div id="summer-lyceum-b" class="program-content hidden">
+
+                        <!-- ================= B' LYKEIOU DIRECTIONS ================= -->
+                        <div class="grid md:grid-cols-2 gap-8">
+
+                            <!-- 1ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                1ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Ανθρωπιστικές, Νομικές & Κοινωνικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                10 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Αρχαία Ελληνικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Ιστορία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Λατινικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <!-- 2ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                2ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Θετικές & Τεχνολογικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                10 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 3ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                3ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Επιστήμες Υγείας & Ζωής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                11 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Βιολογία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά*
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5.5
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 4ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                4ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Σπουδές Οικονομίας & Πληροφορικής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                10 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                5.5
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΕΠΠ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                2
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΟΘ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                1
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Θερινά Γ' Λυκείου ================= -->
+                    <div id="summer-lyceum-c" class="program-content hidden">
+
+                        <!-- ================= Γ' LYKEIOU DIRECTIONS ================= -->
+                        <div class="grid md:grid-cols-2 gap-8">
+
+                            <!-- 1ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                1ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Ανθρωπιστικές, Νομικές & Κοινωνικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                15 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Αρχαία Ελληνικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                6
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Ιστορία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Λατινικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <!-- 2ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                2ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Θετικές & Τεχνολογικές Σπουδές
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                17 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                6
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 3ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                3ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Επιστήμες Υγείας & Ζωής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                14 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Φυσική
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Χημεία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Βιολογία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 4ο Πεδίο -->
+                            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                                <div class="bg-indigo-950 text-white p-6">
+
+                                    <div class="flex justify-between items-start gap-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold">
+                                                4ο Πεδίο
+                                            </h3>
+                                            <p class="text-blue-100 mt-1">
+                                                Σπουδές Οικονομίας & Πληροφορικής
+                                            </p>
+                                        </div>
+
+                                        <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                            <p class="text-xs text-blue-100">
+                                                Σύνολο
+                                            </p>
+                                            <p class="font-bold text-lg">
+                                                16 ώρες
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="w-full">
+                                    <thead class="bg-slate-100">
+                                        <tr>
+                                            <th class="text-left px-6 py-3">
+                                                Μάθημα
+                                            </th>
+                                            <th class="w-24 text-center px-6 py-3">
+                                                Ώρες
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Νεοελληνική Γλώσσα & Λογοτεχνία
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                Μαθηματικά
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                6
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΕΠΠ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                4
+                                            </td>
+                                        </tr>
+
+                                        <tr class="border-t">
+                                            <td class="px-6 py-3">
+                                                ΑΟΘ
+                                            </td>
+
+                                            <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                                3
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ================= Θερινά Γ' ΕΠΑΛ ================= -->
+                    <div id="summer-epal" class="program-content hidden">
+
+                        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-950 text-white px-8 py-5 flex justify-between items-center">
+                                <h2 class="text-2xl font-bold">
+                                    Θερινό Πρόγραμμα Γ' ΕΠΑΛ
+                                </h2>
+                                <div class="bg-white/20 rounded-xl px-4 py-2 text-center whitespace-nowrap">
+                                    <p class="text-xs text-blue-100">
+                                        Σύνολο
+                                    </p>
+                                    <p class="font-bold text-lg">
+                                        10 ώρες
+                                    </p>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="bg-slate-100">
+                                    <tr>
+                                        <th class="text-left px-6 py-3">
+                                            Μάθημα
+                                        </th>
+                                        <th class="w-24 text-center px-6 py-3">
+                                            Ώρες
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-slate-200">
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Νεοελληνική Γλώσσα & Λογοτεχνία
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μαθηματικά
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            4
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μάθημα Ειδικότητας 1
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                    <tr class="hover:bg-slate-50 transition">
+                                        <td class="px-6 py-3 font-medium">
+                                            Μάθημα Ειδικότητας 2
+                                        </td>
+                                        <td class="w-24 px-6 py-3 text-center font-semibold text-blue-900">
+                                            2
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Column 1: Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="font-extrabold text-lg text-white tracking-wide">
+                        Επικοινωνία
+                    </h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-sky-400"></i>
+                            <span>Αγίου Ιωάννου 7, Αγία Παρασκευή, Αθήνα</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-sky-400"></i>
+                            <a href="tel:2106011814" class="text-base transition hover:text-white">
+                                2106011814
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-sky-400"></i>
+                            <a href="mailto:frontistiria.bakoula@gmail.com"
+                                class="hover:text-white transition">frontistiria.bakoula@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Structural Spacing Placeholder -->
+                <div></div>
+
+                <!-- Column 3: Social Media & Memberships -->
+                <div class="space-y-6">
+                    <!-- Social Media -->
+                    <div class="space-y-4">
+                        <h4 class="font-extrabold text-lg text-white tracking-wide">
+                            Ακολουθήστε μας
+                        </h4>
+                        <div class="flex space-x-3 text-xl">
+                            <a href="https://www.facebook.com/profile.php?id=100057698460329"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffrontistiria.bakoula%2F&is_from_rle"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/nikos97bakoulas"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Twitter">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://gr.linkedin.com/company/%CF%86%CF%81%CE%BF%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%B1-%CE%BC%CF%80%CE%B1%CE%BA%CE%BF%CF%8D%CE%BB%CE%B1"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- OEFE & SEFA Memberships -->
+                    <div class="pt-4 border-t border-slate-800 space-y-3">
+                        <p class="text-sm text-slate-400 font-medium">
+                            Φροντιστήριο μέλος της <span class="text-slate-200 font-semibold">ΟΕΦΕ</span> και του <span
+                                class="text-slate-200 font-semibold">ΣΕΦΑ</span>
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="images/oefe.jpg" alt="ΟΕΦΕ Logo"
+                                class="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition duration-200">
+                            <img src="images/sefa.png" alt="ΣΕΦΑ Logo"
+                                class="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition duration-200">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Copyright -->
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                © 2026 Φροντιστήρια Μπακούλα. Με την επιφύλαξη παντός δικαιώματος.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/programs.js"></script>
+</body>
+
+</html>

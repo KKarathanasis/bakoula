@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Φροντιστήρια Μπακούλα</title>
+    <link rel="icon" type="image/x-icon" href="icons/icon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+
+
+<body class="bg-[#B2C4DD] min-h-screen text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- ================= TOP UTILITY BAR ================= -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-slate-400">
+                <span class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-location-dot text-sky-400"></i> Αγ. Ιωάννου 7, Αγ. Παρασκευή
+                </span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="tel:2106011814" class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-phone text-sky-400"></i> 2106011814
+                </a>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="mailto:frontistiria.bakoula@gmail.com"
+                    class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-envelope text-sky-400"></i> frontistiria.bakoula@gmail.com
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-slate-500 text-[11px] hidden lg:inline">© 2026 Φροντιστήρια Μπακούλα.</span>
+                <div class="flex items-center gap-3 text-slate-400">
+                    <a href="https://www.facebook.com/profile.php?id=100057698460329" target="_blank"
+                        class="hover:text-sky-400 transition" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffrontistiria.bakoula%2F&is_from_rle"
+                        target="_blank" class="hover:text-sky-400 transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/nikos97bakoulas" target="_blank" class="hover:text-sky-400 transition"
+                        aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://gr.linkedin.com/company/%CF%86%CF%81%CE%BF%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%B1-%CE%BC%CF%80%CE%B1%CE%BA%CE%BF%CF%8D%CE%BB%CE%B1"
+                        target="_blank" class="hover:text-sky-400 transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= STICKY MAIN HEADER ================= -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl text-slate-900 flex items-center justify-center shadow-lg">
+                    <img src="icons/icon.png">
+                </div>
+                <div>
+                    <span
+                        class="block text-lg font-black tracking-tight text-slate-900 group-hover:text-indigo-900 transition leading-none">
+                        Φροντιστήρια
+                    </span>
+                    <span class="block text-lg font-black tracking-tight text-indigo-600 leading-none mt-0.5">
+                        Μπακούλα
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-1.5 xl:gap-3">
+                <a href="programs.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+                    <span>Προγράμματα</span>
+                </a>
+
+                <a href="useful-links.html"
+                    class="px-2.5 py-1.5 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 leading-tight shrink-0">
+                    <i class="fa-solid fa-book text-indigo-600"></i>
+                    <span class="text-left">Υλικό &<br class="hidden lg:block xl:hidden"> Πανελλήνιες</span>
+                </a>
+
+                <a href="gallery.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-images text-indigo-600"></i>
+                    <span>Φωτογραφίες</span>
+                </a>
+
+                <a href="https://bakoula.blogspot.com/" target="_blank"
+                    class="px-2.5 py-1.5 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 leading-tight shrink-0">
+                    <i class="fa-solid fa-newspaper text-indigo-600" aria-hidden="true"></i>
+                    <span class="text-left">Ηλεκτρονική<br class="hidden lg:block xl:hidden"> Εφημερίδα</span>
+                </a>
+
+                <a href="sports.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-trophy text-indigo-600"></i>
+                    <span>Αθλητισμός</span>
+                </a>
+
+                <a href="contact.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-envelope text-indigo-600"></i>
+                    <span>Επικοινωνία</span>
+                </a>
+            </nav>
+
+            <!-- Header CTA & Mobile Button -->
+            <div class="flex items-center gap-3">
+                <button id="menu-btn"
+                    class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center text-xl focus:outline-none transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-2 shadow-2xl transition-all">
+            <a href="programs.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-graduation-cap w-6 text-indigo-600"></i> Προγράμματα
+            </a>
+            <a href="useful-links.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-link w-6 text-indigo-600"></i> Χρήσιμοι Σύνδεσμοι
+            </a>
+            <a href="gallery.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-images w-6 text-indigo-600"></i> Φωτογραφίες
+            </a>
+            <a href="https://bakoula.blogspot.com/" target="_blank"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-bullhorn w-6 text-indigo-600"></i> Ηλεκτρονική Εφημερίδα
+            </a>
+            <a href="sports.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-trophy w-6 text-indigo-600"></i> Αθλητισμός
+            </a>
+            <a href="contact.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-envelope w-6 text-indigo-600"></i> Επικοινωνία
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow py-10 md:py-16">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <!-- ================= HERO SLIDESHOW ================= -->
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Main Card (Landscape Image) - Takes 7/12 cols -->
+                <a href="https://www.athleteshome.gr/" target="_blank"
+                    class="lg:col-span-8 relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl group flex flex-col justify-between min-h-[360px] p-6 md:p-8 hover:border-indigo-500/50 transition-all duration-300">
+
+                    <!-- Background Image -->
+                    <div class="absolute inset-0">
+                        <img src="images/sports-hero.jpg" alt="Αθλητικό Κέντρο"
+                            class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Bottom Content -->
+                    <div class="relative z-10 space-y-2 mt-auto">
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                            Αθλητικό Κέντρο
+                        </h2>
+                        <p class="text-lg md:text-2xl font-bold text-indigo-400 flex items-center gap-2">
+                            ATHLETES HOME <i
+                                class="fa-solid fa-arrow-up-right-from-square text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Secondary Card (Square Image) - Takes 5/12 cols -->
+                <a href="https://asap.org.gr/" target="_blank"
+                    class="lg:col-span-4 relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl group flex flex-col justify-between min-h-[360px] p-6 md:p-8 hover:border-amber-500/50 transition-all duration-300">
+
+                    <!-- Background Image (Fits square aspect ratio perfectly) -->
+                    <div class="absolute inset-0">
+                        <img src="images/asap.png" alt="Δεύτερη Δραστηριότητα"
+                            class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Bottom Content -->
+                    <div class="relative z-10 space-y-2 mt-auto">
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                            Αθλητικό Σωματείο Αγίας Παρασκευής
+                        </h2>
+                        <p class="text-lg md:text-xl font-bold text-amber-400 flex items-center gap-2">
+                            Μάθετε Περισσότερα <i
+                                class="fa-solid fa-arrow-up-right-from-square text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </p>
+                    </div>
+                </a>
+
+            </section>
+
+            <!-- ================= PHILOSOPHY ================= -->
+            <section class="space-y-10">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Η Φιλοσοφια Μας</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Νοῦς ὑγιής ἐν σώματι ὑγιεί
+                    </h2>
+                    <p class="text-base md:text-lg text-slate-600 leading-relaxed">
+                        Στο φροντιστήριό μας πιστεύουμε ότι η εκπαίδευση δεν περιορίζεται μόνο στην απόκτηση γνώσεων. Η
+                        σωματική άσκηση, η συνεργασία, η πειθαρχία και ο σεβασμός αποτελούν αναπόσπαστα στοιχεία της
+                        ολοκληρωμένης ανάπτυξης κάθε μαθητή.
+                    </p>
+                </div>
+
+                <!-- Feature Cards Row -->
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <div
+                        class="bg-white rounded-2xl p-7 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 text-2xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                🏃
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">
+                                Υγεία
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Η τακτική άθληση συμβάλλει στη σωματική και ψυχική ευεξία.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl p-7 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 text-2xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                🤝
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">
+                                Συνεργασία
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Ο ομαδικός αθλητισμός καλλιεργεί την υπευθυνότητα και το ομαδικό πνεύμα.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl p-7 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 text-2xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                ⭐
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-900 mb-2">
+                                Ισορροπία
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Η ισορροπία μεταξύ μελέτης και άθλησης οδηγεί σε καλύτερη καθημερινότητα.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ================= SATURDAY ACTIVITIES ================= -->
+            <section
+                class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+                <div class="space-y-6 relative z-10">
+
+                    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-white">
+                        Αθλητικές Δραστηριότητες
+                    </h2>
+
+                    <p class="text-slate-200 text-base md:text-lg leading-relaxed">
+                        Κάθε Σάββατο οι μαθητές μας συγκεντρώνονται στο Αθλητικό Κέντρο ATHLETES HOME, όπου συμμετέχουν
+                        σε οργανωμένες
+                        αθλητικές δραστηριότητες, παιχνίδια και ομαδικά αθλήματα.
+                    </p>
+
+                    <div class="pt-4 border-t border-slate-700/80">
+                        <p class="text-indigo-300 text-sm md:text-base font-medium leading-relaxed">
+                            Μέσα από την άθληση ενισχύεται η συνεργασία, η κοινωνικοποίηση, η αυτοπεποίθηση και η
+                            ευγενής άμιλλα, στοιχεία που θεωρούμε εξίσου σημαντικά με την ακαδημαϊκή πρόοδο.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= WEBSITE CTA ================= -->
+            <section
+                class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+                <div class="max-w-3xl space-y-3">
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-globe"></i> Επίσημος Ιστότοπος
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">
+                        Επισκεφθείτε την ιστοσελίδα του Αθλητικού Κέντρου ATHLETES HOME
+                    </h2>
+                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                        Για περισσότερες πληροφορίες σχετικά με τις εγκαταστάσεις, τα προγράμματα, τις φωτογραφίες και
+                        τις δράσεις του Αθλητικού Κέντρου, επισκεφθείτε την επίσημη ιστοσελίδα.
+                    </p>
+                </div>
+
+                <div class="shrink-0 w-full lg:w-auto">
+                    <a href="https://www.athleteshome.gr/" target="_blank"
+                        class="inline-flex items-center justify-center bg-indigo-500 text-slate-950 font-bold px-8 py-4 rounded-xl hover:bg-indigo-400 transition-all duration-200 shadow-md hover:shadow-indigo-500/20 w-full lg:w-auto">
+                        Μετάβαση στην ιστοσελίδα <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ================= CONTACT ================= -->
+            <section class="space-y-8">
+                <div class="border-b border-slate-200/80 pb-4">
+                    <h2
+                        class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="w-2.5 h-8 bg-indigo-500 rounded-full inline-block"></span>
+                        Επικοινωνία & Πρόσβαση
+                    </h2>
+                    <p class="text-slate-600 text-sm md:text-base mt-1">
+                        Στοιχεία επικοινωνίας και χάρτης πρόσβασης στο Αθλητικό Κέντρο.
+                    </p>
+                </div>
+
+                <!-- Contact Layout Grid -->
+                <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+
+                    <!-- Google Maps Frame (7 Cols) -->
+                    <div
+                        class="lg:col-span-7 bg-white rounded-3xl p-3 shadow-sm border border-slate-200/80 min-h-[380px] flex flex-col">
+                        <div class="w-full h-full min-h-[360px] rounded-2xl overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.9880116694862!2d23.886251576383447!3d38.00074009911058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a19bb36ee12c7b%3A0x10084ae21004cb41!2sAthletes%20Home!5e0!3m2!1sen!2sgr!4v1785138877550!5m2!1sen!2sgr"
+                                class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Information Grid Panel (5 Cols) -->
+                    <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
+
+                        <!-- Address Tile -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex items-start gap-4 hover:border-indigo-500 transition duration-200">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-slate-900 mb-0.5">
+                                    Διεύθυνση
+                                </h3>
+                                <p class="text-slate-600 text-sm">
+                                    Μελίνας Μερκούρη 8, Παλλήνη Αττικής
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Hours Tile -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex items-start gap-4 hover:border-indigo-500 transition duration-200">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-slate-900 mb-1">
+                                    Ωράριο Λειτουργίας
+                                </h3>
+                                <div class="text-slate-600 text-sm space-y-0.5">
+                                    <p>Δευτέρα - Παρασκευή: <span class="font-semibold text-slate-800">8:30 –
+                                            22:30</span></p>
+                                    <p>Σάββατο: <span class="font-semibold text-slate-800">10:00 – 18:00</span></p>
+                                    <p>Κυριακή: <span class="font-semibold text-slate-800">Κλειστά</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone Tile -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex items-start gap-4 hover:border-indigo-500 transition duration-200">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-slate-900 mb-0.5">
+                                    Τηλέφωνο
+                                </h3>
+                                <a href="tel:2106032580" class="text-slate-600 text-sm">
+                                    2106032580
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email Tile -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex items-start gap-4 hover:border-indigo-500 transition duration-200">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-slate-900 mb-0.5">
+                                    Email
+                                </h3>
+                                <p class="text-slate-600 text-sm">
+                                    <a href="mailto:info@athleteshome.gr"
+                                        class="hover:text-indigo-600 transition font-semibold">info@athleteshome.gr</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Column 1: Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="font-extrabold text-lg text-white tracking-wide">
+                        Επικοινωνία
+                    </h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-sky-400"></i>
+                            <span>Αγίου Ιωάννου 7, Αγία Παρασκευή, Αθήνα</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-sky-400"></i>
+                            <a href="tel:2106011814" class="text-base transition hover:text-white">
+                                2106011814
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-sky-400"></i>
+                            <a href="mailto:frontistiria.bakoula@gmail.com"
+                                class="hover:text-white transition">frontistiria.bakoula@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Structural Spacing Placeholder -->
+                <div></div>
+
+                <!-- Column 3: Social Media & Memberships -->
+                <div class="space-y-6">
+                    <!-- Social Media -->
+                    <div class="space-y-4">
+                        <h4 class="font-extrabold text-lg text-white tracking-wide">
+                            Ακολουθήστε μας
+                        </h4>
+                        <div class="flex space-x-3 text-xl">
+                            <a href="https://www.facebook.com/profile.php?id=100057698460329"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffrontistiria.bakoula%2F&is_from_rle"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/nikos97bakoulas"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Twitter">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://gr.linkedin.com/company/%CF%86%CF%81%CE%BF%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%B1-%CE%BC%CF%80%CE%B1%CE%BA%CE%BF%CF%8D%CE%BB%CE%B1"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- OEFE & SEFA Memberships -->
+                    <div class="pt-4 border-t border-slate-800 space-y-3">
+                        <p class="text-sm text-slate-400 font-medium">
+                            Φροντιστήριο μέλος της <span class="text-slate-200 font-semibold">ΟΕΦΕ</span> και του <span
+                                class="text-slate-200 font-semibold">ΣΕΦΑ</span>
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="images/oefe.jpg" alt="ΟΕΦΕ Logo"
+                                class="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition duration-200">
+                            <img src="images/sefa.png" alt="ΣΕΦΑ Logo"
+                                class="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition duration-200">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Copyright -->
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                © 2026 Φροντιστήρια Μπακούλα. Με την επιφύλαξη παντός δικαιώματος.
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Mobile Drawer Navigation Script -->
+    <script src="js/sports.js"></script>
+</body>
+
+</html>

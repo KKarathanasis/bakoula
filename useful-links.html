@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Φροντιστήρια Μπακούλα</title>
+    <link rel="icon" type="image/x-icon" href="icons/icon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+
+
+<body class="bg-[#B2C4DD] min-h-screen text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- ================= TOP UTILITY BAR ================= -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-slate-400">
+                <span class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-location-dot text-sky-400"></i> Αγ. Ιωάννου 7, Αγ. Παρασκευή
+                </span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="tel:2106011814" class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-phone text-sky-400"></i> 2106011814
+                </a>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <a href="mailto:frontistiria.bakoula@gmail.com"
+                    class="flex items-center gap-1.5 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-envelope text-sky-400"></i> frontistiria.bakoula@gmail.com
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-slate-500 text-[11px] hidden lg:inline">© 2026 Φροντιστήρια Μπακούλα.</span>
+                <div class="flex items-center gap-3 text-slate-400">
+                    <a href="https://www.facebook.com/profile.php?id=100057698460329" target="_blank"
+                        class="hover:text-sky-400 transition" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffrontistiria.bakoula%2F&is_from_rle"
+                        target="_blank" class="hover:text-sky-400 transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/nikos97bakoulas" target="_blank" class="hover:text-sky-400 transition"
+                        aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://gr.linkedin.com/company/%CF%86%CF%81%CE%BF%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%B1-%CE%BC%CF%80%CE%B1%CE%BA%CE%BF%CF%8D%CE%BB%CE%B1"
+                        target="_blank" class="hover:text-sky-400 transition" aria-label="LinkedIn">
+                        <i class="fab fa-bookedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= STICKY MAIN HEADER ================= -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl text-slate-900 flex items-center justify-center shadow-lg">
+                    <img src="icons/icon.png">
+                </div>
+                <div>
+                    <span
+                        class="block text-lg font-black tracking-tight text-slate-900 group-hover:text-indigo-900 transition leading-none">
+                        Φροντιστήρια
+                    </span>
+                    <span class="block text-lg font-black tracking-tight text-indigo-600 leading-none mt-0.5">
+                        Μπακούλα
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-1.5 xl:gap-3">
+                <a href="programs.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+                    <span>Προγράμματα</span>
+                </a>
+
+                <a href="useful-links.html"
+                    class="px-2.5 py-1.5 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 leading-tight shrink-0">
+                    <i class="fa-solid fa-book text-indigo-600"></i>
+                    <span class="text-left">Υλικό &<br class="hidden lg:block xl:hidden"> Πανελλήνιες</span>
+                </a>
+
+                <a href="gallery.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-images text-indigo-600"></i>
+                    <span>Φωτογραφίες</span>
+                </a>
+
+                <a href="https://bakoula.blogspot.com/" target="_blank"
+                    class="px-2.5 py-1.5 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 leading-tight shrink-0">
+                    <i class="fa-solid fa-newspaper text-indigo-600" aria-hidden="true"></i>
+                    <span class="text-left">Ηλεκτρονική<br class="hidden lg:block xl:hidden"> Εφημερίδα</span>
+                </a>
+
+                <a href="sports.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-trophy text-indigo-600"></i>
+                    <span>Αθλητισμός</span>
+                </a>
+
+                <a href="contact.html"
+                    class="px-2.5 py-2 xl:px-4 rounded-full text-xs xl:text-sm font-semibold text-slate-700 hover:text-indigo-900 hover:bg-slate-100 transition flex items-center gap-1.5 shrink-0">
+                    <i class="fa-solid fa-envelope text-indigo-600"></i>
+                    <span>Επικοινωνία</span>
+                </a>
+            </nav>
+
+            <!-- Header CTA & Mobile Button -->
+            <div class="flex items-center gap-3">
+                <button id="menu-btn"
+                    class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center text-xl focus:outline-none transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-2 shadow-2xl transition-all">
+            <a href="programs.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-graduation-cap w-6 text-indigo-600"></i> Προγράμματα
+            </a>
+            <a href="useful-links.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-link w-6 text-indigo-600"></i> Χρήσιμοι Σύνδεσμοι
+            </a>
+            <a href="gallery.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-images w-6 text-indigo-600"></i> Φωτογραφίες
+            </a>
+            <a href="https://bakoula.blogspot.com/" target="_blank"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-bullhorn w-6 text-indigo-600"></i> Ηλεκτρονική Εφημερίδα
+            </a>
+            <a href="sports.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-trophy w-6 text-indigo-600"></i> Αθλητισμός
+            </a>
+            <a href="contact.html"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 font-medium transition">
+                <i class="fa-solid fa-envelope w-6 text-indigo-600"></i> Επικοινωνία
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow py-10 md:py-16">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <!-- ================= PAGE HEADER ================= -->
+            <section
+                class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+                <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="space-y-2">
+                        <span
+                            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-book"></i> Πλοήγηση & Πηγές
+                        </span>
+                        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+                            Υλικό & Πανελλήνιες
+                        </h1>
+                        <p class="text-slate-300 text-base md:text-lg">
+                            Πρόσβαση σε σημαντικές εκπαιδευτικές ιστοσελίδες, φορείς και εργαλεία για μαθητές και
+                            γονείς.
+                        </p>
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-indigo-500 text-slate-950 flex items-center justify-center text-3xl font-bold shadow-lg shrink-0">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= EDUCATIONAL MATERIAL ================= -->
+            <section class="space-y-6">
+                <div class="border-b border-slate-200/80 pb-4">
+                    <h2
+                        class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="w-2.5 h-8 bg-indigo-500 rounded-full inline-block"></span>
+                        Εκπαιδευτικό Υλικό
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="https://dschool.edu.gr/" target="_blank"
+                        class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Σχολικά Βιβλία
+                                </h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Ψηφιακά σχολικά βιβλία και εκπαιδευτικό υλικό από το Υπουργείο Παιδείας.
+                            </p>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-sm font-bold text-indigo-600 group-hover:text-indigo-700 transition-colors">
+                            Μετάβαση <i
+                                class="fa-solid fa-arrow-right-long ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.iep.edu.gr/trapeza-thematon-arxiki-selida/" target="_blank"
+                        class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Τράπεζα Θεμάτων
+                                </h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Θέματα αξιολόγησης και ασκήσεις για την καλύτερη προετοιμασία των μαθητών.
+                            </p>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-sm font-bold text-indigo-600 group-hover:text-indigo-700 transition-colors">
+                            Μετάβαση <i
+                                class="fa-solid fa-arrow-right-long ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.study4exams.gr/" target="_blank"
+                        class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 group flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    study4exams
+                                </h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Υλικό και εργαλεία μελέτης για μαθητές που προετοιμάζονται για εξετάσεις.
+                            </p>
+                        </div>
+                        <span
+                            class="inline-flex items-center text-sm font-bold text-indigo-600 group-hover:text-indigo-700 transition-colors">
+                            Μετάβαση <i
+                                class="fa-solid fa-arrow-right-long ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ================= ΠΑΝΕΛΛΑΔΙΚΕΣ (HORIZONTAL DIRECTORY LIST LAYOUT) ================= -->
+            <section class="space-y-6">
+                <div class="border-b border-slate-200/80 pb-4">
+                    <h2
+                        class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="w-2.5 h-8 bg-indigo-500 rounded-full inline-block"></span>
+                        Πανελλαδικές Εξετάσεις
+                    </h2>
+                </div>
+
+                <!-- List Directory Layout -->
+                <div class="space-y-3">
+
+                    <a href="https://www.oefe.gr/el/static/college-bases_el.aspx" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Βάσεις Σχολών
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Αναζήτηση βάσεων εισαγωγής και πληροφορίες σχολών.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.oefe.gr/el/normal/thematapanelliniwn.aspx" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Αρχείο Θεμάτων Πανελλαδικών Εξετάσεων
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Θέματα προηγούμενων ετών για εξάσκηση και καλύτερη προετοιμασία.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.oefe.gr/el/static/panelladikes.aspx" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group hidden">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Θέματα & Λύσεις Πανελλαδικών Εξετάσεων
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Θέματα εξετάσεων μαζί με ενδεικτικές λύσεις και απαντήσεις.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://epan.oefe.cloud/el/normal/EpanThemataArchive" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Θέματα Ο.Ε.Φ.Ε
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Θέματα διαγωνισμάτων και εκπαιδευτικό υλικό Ο.Ε.Φ.Ε.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.oefe.gr/el/normal/credits-calculation_el.aspx" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Υπολογισμός Μορίων
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Υπολογίστε τα μόρια εισαγωγής και δείτε τις πιθανές σχολές.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://www.minedu.gov.gr/" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Ενημερώσεις - Υπουργείο Παιδειας
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Επίσημες ανακοινώσεις και ενημερώσεις για τις εξετάσεις.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <a href="https://portal.oefe.gr/el/static/home" target="_blank"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Πλατφόρμα Ψηφιακής Εκπαίδευσης με Τεχνητή Νοημοσύνη
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Πλατφόρμα Τεχνητής Νοημοσύνης από την ΟΕΦΕ.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- ================= ΜΑΘΗΜΑΤΙΚΟΙ ΔΙΑΓΩΝΙΣΜΟΙ ================= -->
+            <section class="space-y-6">
+                <div class="border-b border-slate-200/80 pb-4">
+                    <h2
+                        class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="w-2.5 h-8 bg-indigo-500 rounded-full inline-block"></span>
+                        Μαθηματικοί Διαγωνισμοί
+                    </h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-6">
+
+                    <!-- Card 1: Καγκουρό -->
+                    <div
+                        class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                    <i class="fa-solid fa-trophy"></i>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                        Διεθνής Μαθηματικός Διαγωνισμός «Καγκουρό»
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Διεθνής μαθητικός διαγωνισμός για όλες τις τάξεις με έμφαση στη δημιουργική σκέψη.
+                            </p>
+                        </div>
+
+                        <!-- Centered Image Container -->
+                        <div class="my-3 flex items-center justify-center">
+                            <a href="https://www.aksf.org/" target="_blank" rel="noopener noreferrer"
+                                class="inline-block">
+                                <img src="images/kangaroo.png" alt="Καγκουρό Logo"
+                                    class="max-h-36 w-auto object-contain transition-transform duration-300 hover:scale-105">
+                            </a>
+                        </div>
+
+                        <!-- Link/File Button for Kangaroo -->
+                        <a href="https://ed-hub.eu/el/kangaroo/" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-between px-5 py-3.5 rounded-xl bg-slate-50 hover:bg-indigo-600 text-slate-700 hover:text-white font-bold text-sm transition-all duration-200 group/btn">
+                            <span>Ιστοσελίδα Διαγωνισμού</span>
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square text-xs group-hover/btn:translate-x-0.5 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Ελληνική Μαθηματική Εταιρεία (Ε.Μ.Ε.) -->
+                    <div
+                        class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                        Ελληνική Μαθηματική Εταιρεία (Ε.Μ.Ε.)
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Πανελλήνιοι μαθητικοί διαγωνισμοί για την ανάδειξη μαθηματικών ταλέντων και την
+                                προετοιμασία για τη Μαθηματική Ολυμπιάδα.
+                            </p>
+
+                            <!-- Sub-competitions Grid -->
+                            <div class="grid sm:grid-cols-2 gap-3 mb-6">
+
+                                <!-- Θαλής -->
+                                <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                                    class="p-3.5 rounded-xl bg-slate-50 hover:bg-indigo-50/80 border border-slate-200/60 hover:border-indigo-300 transition-all duration-200 group/sub flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 group-hover/sub:bg-indigo-600 group-hover/sub:text-white transition-colors">
+                                            01
+                                        </div>
+                                        <span
+                                            class="text-sm font-bold text-slate-800 group-hover/sub:text-indigo-600 transition-colors">Θαλής</span>
+                                    </div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/sub:text-indigo-600 transition-colors"></i>
+                                </a>
+
+                                <!-- Ευκλείδης -->
+                                <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                                    class="p-3.5 rounded-xl bg-slate-50 hover:bg-indigo-50/80 border border-slate-200/60 hover:border-indigo-300 transition-all duration-200 group/sub flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 group-hover/sub:bg-indigo-600 group-hover/sub:text-white transition-colors">
+                                            02
+                                        </div>
+                                        <span
+                                            class="text-sm font-bold text-slate-800 group-hover/sub:text-indigo-600 transition-colors">Ευκλείδης</span>
+                                    </div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/sub:text-indigo-600 transition-colors"></i>
+                                </a>
+
+                                <!-- Αρχιμήδης -->
+                                <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                                    class="p-3.5 rounded-xl bg-slate-50 hover:bg-indigo-50/80 border border-slate-200/60 hover:border-indigo-300 transition-all duration-200 group/sub flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 group-hover/sub:bg-indigo-600 group-hover/sub:text-white transition-colors">
+                                            03
+                                        </div>
+                                        <span
+                                            class="text-sm font-bold text-slate-800 group-hover/sub:text-indigo-600 transition-colors">Αρχιμήδης</span>
+                                    </div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/sub:text-indigo-600 transition-colors"></i>
+                                </a>
+
+                                <!-- Πυθαγόρας -->
+                                <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                                    class="p-3.5 rounded-xl bg-slate-50 hover:bg-indigo-50/80 border border-slate-200/60 hover:border-indigo-300 transition-all duration-200 group/sub flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center shrink-0 group-hover/sub:bg-indigo-600 group-hover/sub:text-white transition-colors">
+                                            04
+                                        </div>
+                                        <span
+                                            class="text-sm font-bold text-slate-800 group-hover/sub:text-indigo-600 transition-colors">Πυθαγόρας</span>
+                                    </div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover/sub:text-indigo-600 transition-colors"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- Main EME Link Button -->
+                        <a href="https://www.hms.gr/" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-between px-5 py-3.5 rounded-xl bg-slate-50 hover:bg-indigo-600 text-slate-700 hover:text-white font-bold text-sm transition-all duration-200 group/btn">
+                            <span>Κεντρική Ιστοσελίδα Ε.Μ.Ε.</span>
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square text-xs group-hover/btn:translate-x-0.5 transition-transform"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- ================= ΜΑΘΗΜΑΤΙΚΟΙ ΔΙΑΓΩΝΙΣΜΟΙ (DIRECTORY) ================= -->
+            <section class="space-y-6">
+                <div class="border-b border-slate-200/80 pb-4">
+                    <h2
+                        class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="w-2.5 h-8 bg-indigo-500 rounded-full inline-block"></span>
+                        Μαθηματικοί Διαγωνισμοί
+                    </h2>
+                </div>
+
+                <div class="space-y-3">
+                    <!-- Καγκουρό -->
+                    <a href="https://ed-hub.eu/el/kangaroo/" target="_blank" rel="noopener noreferrer"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Διαγωνισμός «Καγκουρό»
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Διεθνής μαθητικός διαγωνισμός για όλες τις τάξεις με έμφαση στη δημιουργική σκέψη.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <!-- Ε.Μ.Ε. Header Card / Main Link -->
+                    <a href="https://www.hms.gr/" target="_blank" rel="noopener noreferrer"
+                        class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 hover:border-indigo-500 hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    Ελληνική Μαθηματική Εταιρεία (Ε.Μ.Ε.)
+                                </h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mt-0.5">
+                                    Επίσημος φορέας διοργάνωσης πανελλήνιων μαθηματικών διαγωνισμών.
+                                </p>
+                            </div>
+                        </div>
+                        <span
+                            class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                            Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <!-- Sub-Competitions Nested Container -->
+                    <div class="pl-4 sm:pl-8 border-l-2 border-indigo-200 space-y-2.5 my-2">
+
+                        <!-- Θαλής -->
+                        <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                            class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/70 hover:border-indigo-500 hover:shadow-sm transition-all duration-200 flex items-center justify-between gap-4 group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 font-extrabold text-xs flex items-center justify-center shrink-0">
+                                    01
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                        Διαγωνισμός «Θαλής»
+                                    </h4>
+                                </div>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                                Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Ευκλείδης -->
+                        <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                            class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/70 hover:border-indigo-500 hover:shadow-sm transition-all duration-200 flex items-center justify-between gap-4 group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 font-extrabold text-xs flex items-center justify-center shrink-0">
+                                    02
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                        Διαγωνισμός «Ευκλείδης»
+                                    </h4>
+                                </div>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                                Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Αρχιμήδης -->
+                        <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                            class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/70 hover:border-indigo-500 hover:shadow-sm transition-all duration-200 flex items-center justify-between gap-4 group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 font-extrabold text-xs flex items-center justify-center shrink-0">
+                                    03
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                        Διαγωνισμός «Αρχιμήδης»
+                                    </h4>
+                                </div>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                                Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                            </span>
+                        </a>
+
+                        <!-- Πυθαγόρας -->
+                        <a href="https://hms.gr/competitions/" target="_blank" rel="noopener noreferrer"
+                            class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/70 hover:border-indigo-500 hover:shadow-sm transition-all duration-200 flex items-center justify-between gap-4 group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 font-extrabold text-xs flex items-center justify-center shrink-0">
+                                    04
+                                </div>
+                                <div>
+                                    <h4
+                                        class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                        Διαγωνισμός «Πυθαγόρας»
+                                    </h4>
+                                </div>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-4 py-2 rounded-xl bg-slate-50 text-slate-700 font-bold text-xs group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0">
+                                Μετάβαση <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-[10px]"></i>
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Column 1: Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="font-extrabold text-lg text-white tracking-wide">
+                        Επικοινωνία
+                    </h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-sky-400"></i>
+                            <span>Αγίου Ιωάννου 7, Αγία Παρασκευή, Αθήνα</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-sky-400"></i>
+                            <a href="tel:2106011814" class="text-base transition hover:text-white">
+                                2106011814
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-sky-400"></i>
+                            <a href="mailto:frontistiria.bakoula@gmail.com"
+                                class="hover:text-white transition">frontistiria.bakoula@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Structural Spacing Placeholder -->
+                <div></div>
+
+                <!-- Column 3: Social Media & Memberships -->
+                <div class="space-y-6">
+                    <!-- Social Media -->
+                    <div class="space-y-4">
+                        <h4 class="font-extrabold text-lg text-white tracking-wide">
+                            Ακολουθήστε μας
+                        </h4>
+                        <div class="flex space-x-3 text-xl">
+                            <a href="https://www.facebook.com/profile.php?id=100057698460329"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffrontistiria.bakoula%2F&is_from_rle"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/nikos97bakoulas"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="Twitter">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://gr.linkedin.com/company/%CF%86%CF%81%CE%BF%CE%BD%CF%84%CE%B9%CF%83%CF%84%CE%AE%CF%81%CE%B9%CE%B1-%CE%BC%CF%80%CE%B1%CE%BA%CE%BF%CF%8D%CE%BB%CE%B1"
+                                class="w-10 h-10 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-slate-900 flex items-center justify-center text-slate-300 transition duration-200"
+                                target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-bookedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- OEFE & SEFA Memberships -->
+                    <div class="pt-4 border-t border-slate-800 space-y-3">
+                        <p class="text-sm text-slate-400 font-medium">
+                            Φροντιστήριο μέλος της <span class="text-slate-200 font-semibold">ΟΕΦΕ</span> και του <span
+                                class="text-slate-200 font-semibold">ΣΕΦΑ</span>
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="images/oefe.jpg" alt="ΟΕΦΕ Logo"
+                                class="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition duration-200">
+                            <img src="images/sefa.png" alt="ΣΕΦΑ Logo"
+                                class="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition duration-200">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Copyright -->
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                © 2026 Φροντιστήρια Μπακούλα. Με την επιφύλαξη παντός δικαιώματος.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/useful-links.js"></script>
+</body>
+
+</html>
