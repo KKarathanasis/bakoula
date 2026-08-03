@@ -9,68 +9,88 @@ if (menuBtn && mobileMenu) {
 }
 
 // ================= LIGHTBOX GALLERY =================
-// Automatically extract image sources from all grid card images (.gallery-img)
-const galleryImgElements = document.querySelectorAll(".gallery-img");
-const galleryImages = Array.from(galleryImgElements).map(img => img.getAttribute("src"));
+let activeCategory = 'all';
+let visibleImages = [];
+let currentLightboxIndex = 0;
 
-let currentImageIndex = 0;
+// Filter cards by category
+function filterGallery(category, buttonElement) {
+    activeCategory = category;
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
-const lightboxCounter = document.getElementById("lightboxCounter");
+    // Update active filter button styling
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    filterBtns.forEach(btn => {
+        btn.className = "gallery-filter-btn bg-white text-slate-700 hover:bg-slate-100 border border-slate-200/80 px-5 py-2.5 rounded-2xl text-sm font-bold shadow-sm transition duration-300";
+    });
+    buttonElement.className = "gallery-filter-btn active bg-indigo-600 text-white px-5 py-2.5 rounded-2xl text-sm font-bold shadow-md transition duration-300";
 
-function updateLightbox() {
-    if (!lightboxImg || galleryImages.length === 0) return;
+    // Show/Hide cards
+    const cards = document.querySelectorAll('.gallery-card');
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
 
-    // 1. Update modal image source
-    lightboxImg.src = galleryImages[currentImageIndex];
+    // Update list of visible images for lightbox
+    updateVisibleImagesList();
+}
 
-    // 2. Update counter text (e.g., 1 / 6)
-    if (lightboxCounter) {
-        lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+// Update internal list of images currently visible on screen
+function updateVisibleImagesList() {
+    const visibleCards = document.querySelectorAll('.gallery-card:not(.hidden)');
+    visibleImages = Array.from(visibleCards).map(card => card.querySelector('.gallery-img'));
+}
+
+// Open Lightbox synced to current category
+function openLightbox(cardElement) {
+    updateVisibleImagesList();
+    const cardImg = cardElement.querySelector('.gallery-img');
+    currentLightboxIndex = visibleImages.indexOf(cardImg);
+
+    if (currentLightboxIndex !== -1) {
+        updateLightboxContent();
+        document.getElementById('lightbox').classList.remove('hidden');
     }
 }
 
-function openLightbox(index) {
-    if (!lightbox) return;
-    currentImageIndex = index;
-    updateLightbox();
-    lightbox.classList.remove("hidden");
-    document.body.style.overflow = "hidden"; // Lock page scrolling while open
-}
-
-function closeLightbox() {
-    if (!lightbox) return;
-    lightbox.classList.add("hidden");
-    document.body.style.overflow = ""; // Restore page scrolling
+// Update image and counter inside lightbox
+function updateLightboxContent() {
+    if (visibleImages.length === 0) return;
+    const img = visibleImages[currentLightboxIndex];
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxImg').alt = img.alt || "Προβολή φωτογραφίας";
+    document.getElementById('lightboxCounter').textContent = `${currentLightboxIndex + 1} / ${visibleImages.length}`;
 }
 
 function prevLightboxImage() {
-    if (galleryImages.length === 0) return;
-    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-    updateLightbox();
+    if (visibleImages.length === 0) return;
+    currentLightboxIndex = (currentLightboxIndex - 1 + visibleImages.length) % visibleImages.length;
+    updateLightboxContent();
 }
 
 function nextLightboxImage() {
-    if (galleryImages.length === 0) return;
-    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-    updateLightbox();
+    if (visibleImages.length === 0) return;
+    currentLightboxIndex = (currentLightboxIndex + 1) % visibleImages.length;
+    updateLightboxContent();
 }
 
-// Close Lightbox when clicking backdrop outside the image container
-if (lightbox) {
-    lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
+function closeLightbox() {
+    document.getElementById('lightbox').classList.add('hidden');
 }
 
-// Keyboard Navigation (Escape to exit, Left/Right arrows to cycle)
-document.addEventListener("keydown", (e) => {
-    if (!lightbox || lightbox.classList.contains("hidden")) return;
+// Keyboard support (Escape to close, Arrows to navigate)
+document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox.classList.contains('hidden')) return;
 
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") prevLightboxImage();
-    if (e.key === "ArrowRight") nextLightboxImage();
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevLightboxImage();
+    if (e.key === 'ArrowRight') nextLightboxImage();
 });
+
+// Initialize list on load
+document.addEventListener('DOMContentLoaded', updateVisibleImagesList);
